@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<head>
+			<title>Vía Digital RA</title>
+		</head>
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+		<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+	</head>
+	<body style="margin : 0px; overflow: hidden;">
+	<a-scene
+		light="defaultLightsEnabled: false"
+		gltf-model="dracoDecoderPath: decoder/;"
+		loading-screen="dotsColor: white; backgroundColor: black"
+		vr-mode-ui="enabled: false;"
+		renderer="logarithmicDepthBuffer: true;"
+		embedded
+		arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960"
+	>
+		<a-assets timeout="300000">
+			<a-asset-item id="tren" src="assets/trenComp2.glb"></a-asset-item>
+			<img id="logo" src="assets/logo.png">
+		</a-assets>
+		<a-marker 
+			type='barcode'
+			value='2'
+			smooth="true"
+			smoothCount="10"
+			smoothTolerance=".01"
+			smoothThreshold="5"
+		>
+			<a-entity
+				gltf-model="#tren"
+				scale="1 1 1"
+				rotation="0 0 0"
+				position="0 0 0"
+				
+			>
+			</a-entity>
+			<a-image src="#logo" position="3.2 0 3,8" rotation = "-90 0 -90" width="3" height="2.56"></a-image></a-image>
+			<a-entity light="type: ambient; color: #CCC; intensity: 0.5"></a-entity>
+		</a-marker>
+		<a-entity camera></a-entity>
+	</a-scene>
+	</body>
+</html>
