@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | ARWT</title>
-    <script src="Build/WebAR3.loader.js"></script>
+    <script src="Build/HonorAR.loader.js"></script>
     <script src="js/lib/aframe.min.js"></script>
     <script src="js/lib/aframe-ar.js"></script>
 
@@ -56,11 +56,11 @@
         var unityCanvas = document.querySelector("#unity-canvas");
 
         var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/WebAR3.loader.js";
+        var loaderUrl = buildUrl + "/HonorAR.loader.js";
         var config = {
-            dataUrl: buildUrl + "/WebAR3.data",
-            frameworkUrl: buildUrl + "/WebAR3.framework.js",
-            codeUrl: buildUrl + "/WebAR3.wasm",
+            dataUrl: buildUrl + "/HonorAR.data",
+            frameworkUrl: buildUrl + "/HonorAR.framework.js",
+            codeUrl: buildUrl + "/HonorAR.wasm",
         streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "ARWT",
